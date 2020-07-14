@@ -18,7 +18,7 @@ import org.apache.log4j.PropertyConfigurator;
 
 /**
  *
- * @author User
+ * @author W1710551 - Christopher Rees
  */
 public class User {
     String fName, lName, username, email, profileImg, userType, sessionID;
@@ -222,7 +222,7 @@ public class User {
     
     // Custom Method to Log Upload Activity to User Log File
     public org.apache.log4j.Logger uploadProject() {
-        org.apache.log4j.Logger logger = org.apache.log4j.Logger.getLogger(PreviewUpload.class);
+        org.apache.log4j.Logger logger = org.apache.log4j.Logger.getLogger(User.class);
         String log4jConfigFile = System.getProperty("user.dir") + File.separator + "log4j.properties";
         PropertyConfigurator.configure(log4jConfigFile);
         if (this.isUserActive() == true) {
@@ -235,7 +235,7 @@ public class User {
     
     // Custom Method to Log Upload Activity to User Log File
     public org.apache.log4j.Logger uploadPart() {
-        org.apache.log4j.Logger logger = org.apache.log4j.Logger.getLogger(PreviewUpload.class);
+        org.apache.log4j.Logger logger = org.apache.log4j.Logger.getLogger(User.class);
         String log4jConfigFile = System.getProperty("user.dir") + File.separator + "log4j.properties";
         PropertyConfigurator.configure(log4jConfigFile);
         if (this.isUserActive() == true) {
